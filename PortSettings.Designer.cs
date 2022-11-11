@@ -47,36 +47,41 @@
             // listBoxPorts
             // 
             this.listBoxPorts.FormattingEnabled = true;
-            this.listBoxPorts.Location = new System.Drawing.Point(12, 34);
+            this.listBoxPorts.ItemHeight = 18;
+            this.listBoxPorts.Location = new System.Drawing.Point(16, 41);
+            this.listBoxPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxPorts.Name = "listBoxPorts";
-            this.listBoxPorts.Size = new System.Drawing.Size(186, 43);
+            this.listBoxPorts.Size = new System.Drawing.Size(452, 112);
             this.listBoxPorts.TabIndex = 0;
             this.listBoxPorts.SelectedIndexChanged += new System.EventHandler(this.listBoxPorts_SelectedIndexChanged);
             // 
             // comboBoxBaudRate
             // 
             this.comboBoxBaudRate.FormattingEnabled = true;
-            this.comboBoxBaudRate.Location = new System.Drawing.Point(77, 86);
+            this.comboBoxBaudRate.Location = new System.Drawing.Point(119, 177);
+            this.comboBoxBaudRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxBaudRate.Name = "comboBoxBaudRate";
-            this.comboBoxBaudRate.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxBaudRate.Size = new System.Drawing.Size(180, 26);
             this.comboBoxBaudRate.TabIndex = 1;
             this.comboBoxBaudRate.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaudRate_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 89);
+            this.label1.Location = new System.Drawing.Point(17, 181);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(89, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Baud Rate";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 115);
+            this.label2.Location = new System.Drawing.Point(17, 217);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(89, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data Bits";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -84,76 +89,85 @@
             // comboBoxDataBits
             // 
             this.comboBoxDataBits.FormattingEnabled = true;
-            this.comboBoxDataBits.Location = new System.Drawing.Point(77, 112);
+            this.comboBoxDataBits.Location = new System.Drawing.Point(119, 213);
+            this.comboBoxDataBits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxDataBits.Name = "comboBoxDataBits";
-            this.comboBoxDataBits.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDataBits.Size = new System.Drawing.Size(180, 26);
             this.comboBoxDataBits.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 142);
+            this.label3.Location = new System.Drawing.Point(17, 255);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Parity";
             // 
             // comboBoxParity
             // 
             this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(77, 139);
+            this.comboBoxParity.Location = new System.Drawing.Point(119, 250);
+            this.comboBoxParity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxParity.Size = new System.Drawing.Size(180, 26);
             this.comboBoxParity.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 169);
+            this.label4.Location = new System.Drawing.Point(17, 292);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(89, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Stop Bits";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 196);
+            this.label5.Location = new System.Drawing.Point(17, 329);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(116, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "Flow Control";
             // 
             // comboBoxStopBits
             // 
             this.comboBoxStopBits.FormattingEnabled = true;
-            this.comboBoxStopBits.Location = new System.Drawing.Point(77, 166);
+            this.comboBoxStopBits.Location = new System.Drawing.Point(119, 288);
+            this.comboBoxStopBits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxStopBits.Name = "comboBoxStopBits";
-            this.comboBoxStopBits.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStopBits.Size = new System.Drawing.Size(180, 26);
             this.comboBoxStopBits.TabIndex = 9;
             // 
             // comboBoxFlowControl
             // 
             this.comboBoxFlowControl.FormattingEnabled = true;
-            this.comboBoxFlowControl.Location = new System.Drawing.Point(77, 193);
+            this.comboBoxFlowControl.Location = new System.Drawing.Point(119, 325);
+            this.comboBoxFlowControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxFlowControl.Name = "comboBoxFlowControl";
-            this.comboBoxFlowControl.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxFlowControl.Size = new System.Drawing.Size(180, 26);
             this.comboBoxFlowControl.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 18);
+            this.label6.Location = new System.Drawing.Point(13, 9);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 13);
+            this.label6.Size = new System.Drawing.Size(341, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Double click on port you want to use:";
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(12, 232);
+            this.buttonOK.Location = new System.Drawing.Point(358, 325);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.Size = new System.Drawing.Size(112, 32);
             this.buttonOK.TabIndex = 12;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -161,9 +175,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(123, 232);
+            this.buttonCancel.Location = new System.Drawing.Point(358, 285);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 32);
             this.buttonCancel.TabIndex = 13;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -171,9 +186,9 @@
             // 
             // PortSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 267);
+            this.ClientSize = new System.Drawing.Size(483, 381);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.label6);
@@ -189,6 +204,7 @@
             this.Controls.Add(this.comboBoxBaudRate);
             this.Controls.Add(this.listBoxPorts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PortSettings";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.PortSettings_Load);

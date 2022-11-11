@@ -13,6 +13,8 @@ using PortSet;
 using ListManagement;
 using System.IO;
 using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ZGWUI
 {
@@ -16298,6 +16300,160 @@ namespace ZGWUI
         private void buttonNciCmd_Click(object sender, EventArgs e)
         {
             setNciCmd((byte)comboBoxNciCmd.SelectedIndex);
+        }
+
+        private void buttonAutoStore_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr;
+            UInt16 u16GroupId;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            byte u8SceneId;
+            byte u8StoreCnt;
+
+            if (bStringToUint16(textBoxStoreSceneAddr.Text, out u16ShortAddr) == true)
+            {
+                if (bStringToUint8(textBoxStoreSceneSrcEndPoint.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(textBoxStoreSceneDstEndPoint.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(textBoxStoreSceneGroupId.Text, out u16GroupId) == true)
+                        {
+                            if (bStringToUint8(textBoxStoreSceneSceneId.Text, out u8SceneId) == true)
+                            {
+                                if (bStringToUint8(textBox_store_cnt.Text, out u8StoreCnt) == true)
+                                {
+                                    Task task = Task.Factory.StartNew(async () =>
+                                    {
+                                        for (byte i = 0; i < u8StoreCnt; i++)
+                                        {
+                                            sendStoreScene((byte)comboBoxStoreSceneAddrMode.SelectedIndex, u16ShortAddr, u8SrcEndPoint, u8DstEndPoint, u16GroupId, (byte)(u8SceneId + i));
+                                            //Thread.Sleep(1000);
+                                            await Task.Delay(1000);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonAutoAdd_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr;
+            UInt16 u16GroupId;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            byte u8SceneId;
+            byte u8AddCnt;
+
+            if (bStringToUint16(textBoxAddSceneAddr.Text, out u16ShortAddr) == true)
+            {
+                if (bStringToUint8(textBoxAddSceneSrcEndPoint.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(textBoxAddSceneDstEndPoint.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(textBoxAddSceneGroupId.Text, out u16GroupId) == true)
+                        {
+                            if (bStringToUint8(textBoxAddSceneSceneId.Text, out u8SceneId) == true)
+                            {
+                                if (bStringToUint8(textBox_add_cnt.Text, out u8AddCnt) == true)
+                                {
+                                    Task task = Task.Factory.StartNew(async () =>
+                                    {
+                                        for (byte i = 0; i < u8AddCnt; i++)
+                                        {
+                                            sendAddScene((byte)comboBoxAddSceneAddrMode.SelectedIndex, u16ShortAddr, u8SrcEndPoint, u8DstEndPoint, u16GroupId, (byte)(u8SceneId + i));
+                                            //Thread.Sleep(1000);
+                                            await Task.Delay(1000);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonAutoGroup_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr;
+            UInt16 u16GroupAddr;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            byte u8GroupNameLength;
+            byte u8GroupNameMaxLength;
+            byte u8AddCnt;
+            if (bStringToUint16(textBoxAddGroupAddr.Text, out u16ShortAddr) == true)
+            {
+                if (bStringToUint8(textBoxAddGroupSrcEp.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(textBoxAddGroupDstEp.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(textBoxAddGroupGroupAddr.Text, out u16GroupAddr) == true)
+                        {
+                            if (bStringToUint8(textBoxGroupNameLength.Text, out u8GroupNameLength) == true)
+                            {
+                                if (bStringToUint8(textBoxGroupNameMaxLength.Text, out u8GroupNameMaxLength) == true)
+                                {
+                                    if (bStringToUint8(textBox_add_group_cnt.Text, out u8AddCnt) == true)
+                                    {
+                                        Task task = Task.Factory.StartNew(async () =>
+                                        {
+                                            for (byte i = 0; i < u8AddCnt; i++)
+                                            {
+                                                sendGroupAdd(u16ShortAddr, u8SrcEndPoint, u8DstEndPoint,(ushort)(u16GroupAddr+i), u8GroupNameLength, u8GroupNameMaxLength, textBoxGroupName.Text);
+                                                //Thread.Sleep(1000);
+                                                await Task.Delay(1000);
+                                            }
+                                        });
+                                        //sendGroupAdd(u16ShortAddr, u8SrcEndPoint, u8DstEndPoint, u16GroupAddr, u8GroupNameLength, u8GroupNameMaxLength, textBoxGroupName.Text);
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //UInt16 u16ShortAddr;
+            //UInt16 u16GroupId;
+            //byte u8SrcEndPoint;
+            //byte u8DstEndPoint;
+            //byte u8SceneId;
+            //byte u8AddCnt;
+
+            //if (bStringToUint16(textBoxAddSceneAddr.Text, out u16ShortAddr) == true)
+            //{
+            //    if (bStringToUint8(textBoxAddSceneSrcEndPoint.Text, out u8SrcEndPoint) == true)
+            //    {
+            //        if (bStringToUint8(textBoxAddSceneDstEndPoint.Text, out u8DstEndPoint) == true)
+            //        {
+            //            if (bStringToUint16(textBoxAddSceneGroupId.Text, out u16GroupId) == true)
+            //            {
+            //                if (bStringToUint8(textBoxAddSceneSceneId.Text, out u8SceneId) == true)
+            //                {
+            //                    if (bStringToUint8(textBox_add_cnt.Text, out u8AddCnt) == true)
+            //                    {
+            //                        Task task = Task.Factory.StartNew(async () =>
+            //                        {
+            //                            for (byte i = 0; i < u8AddCnt; i++)
+            //                            {
+            //                                sendAddScene((byte)comboBoxAddSceneAddrMode.SelectedIndex, u16ShortAddr, u8SrcEndPoint, u8DstEndPoint, u16GroupId, (byte)(u8SceneId + i));
+            //                                //Thread.Sleep(1000);
+            //                                await Task.Delay(1000);
+            //                            }
+            //                        });
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
         }
     }
 }
