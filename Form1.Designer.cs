@@ -258,6 +258,9 @@
             this.comboBoxBasicResetTargetAddrMode = new System.Windows.Forms.ComboBox();
             this.buttonBasicReset = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox_add_group_cnt = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonAutoGroup = new System.Windows.Forms.Button();
             this.textBoxGroupName = new System.Windows.Forms.TextBox();
             this.textBoxGroupNameMaxLength = new System.Windows.Forms.TextBox();
             this.textBoxGroupNameLength = new System.Windows.Forms.TextBox();
@@ -499,9 +502,6 @@
             this.toolTipGeneralTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.buttonAutoGroup = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox_add_group_cnt = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -540,28 +540,28 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2078, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(2078, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 28);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 32);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // openPortToolStripMenuItem
             // 
             this.openPortToolStripMenuItem.Name = "openPortToolStripMenuItem";
-            this.openPortToolStripMenuItem.Size = new System.Drawing.Size(115, 28);
+            this.openPortToolStripMenuItem.Size = new System.Drawing.Size(115, 32);
             this.openPortToolStripMenuItem.Text = "Open Port";
             this.openPortToolStripMenuItem.Click += new System.EventHandler(this.openPortToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(80, 28);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -571,22 +571,22 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusPort,
             this.toolStripPortSettings});
-            this.statusStrip.Location = new System.Drawing.Point(0, 1126);
+            this.statusStrip.Location = new System.Drawing.Point(0, 1120);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 22, 0);
-            this.statusStrip.Size = new System.Drawing.Size(2078, 22);
+            this.statusStrip.Size = new System.Drawing.Size(2078, 28);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
             // toolStripStatusPort
             // 
             this.toolStripStatusPort.Name = "toolStripStatusPort";
-            this.toolStripStatusPort.Size = new System.Drawing.Size(0, 15);
+            this.toolStripStatusPort.Size = new System.Drawing.Size(0, 21);
             // 
             // toolStripPortSettings
             // 
             this.toolStripPortSettings.Name = "toolStripPortSettings";
-            this.toolStripPortSettings.Size = new System.Drawing.Size(0, 15);
+            this.toolStripPortSettings.Size = new System.Drawing.Size(0, 21);
             // 
             // tabControl1
             // 
@@ -596,13 +596,13 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPageDevice);
             this.tabControl1.Controls.Add(this.tabPage12);
-            this.tabControl1.Controls.Add(this.AHIControl);
             this.tabControl1.Controls.Add(this.BasicClusterTab);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage14);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage13);
@@ -610,8 +610,8 @@
             this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage11);
-            this.tabControl1.Controls.Add(this.tabPage14);
             this.tabControl1.Controls.Add(this.tabPagePollControl);
+            this.tabControl1.Controls.Add(this.AHIControl);
             this.tabControl1.Location = new System.Drawing.Point(20, 36);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -3413,6 +3413,30 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Group Cluster";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // textBox_add_group_cnt
+            // 
+            this.textBox_add_group_cnt.Location = new System.Drawing.Point(1489, 11);
+            this.textBox_add_group_cnt.Name = "textBox_add_group_cnt";
+            this.textBox_add_group_cnt.Size = new System.Drawing.Size(100, 28);
+            this.textBox_add_group_cnt.TabIndex = 35;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(770, 435);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 28);
+            this.textBox1.TabIndex = 34;
+            // 
+            // buttonAutoGroup
+            // 
+            this.buttonAutoGroup.Location = new System.Drawing.Point(1369, 11);
+            this.buttonAutoGroup.Name = "buttonAutoGroup";
+            this.buttonAutoGroup.Size = new System.Drawing.Size(114, 28);
+            this.buttonAutoGroup.TabIndex = 33;
+            this.buttonAutoGroup.Text = "Auto Add";
+            this.buttonAutoGroup.UseVisualStyleBackColor = true;
+            this.buttonAutoGroup.Click += new System.EventHandler(this.buttonAutoGroup_Click);
             // 
             // textBoxGroupName
             // 
@@ -6255,7 +6279,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(874, 9);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(872, 9);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6295,7 +6319,7 @@
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
             this.richTextBoxMessageView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(982, 355);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(980, 355);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
@@ -6364,30 +6388,6 @@
             this.splitContainer1.SplitterDistance = 1022;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 94;
-            // 
-            // buttonAutoGroup
-            // 
-            this.buttonAutoGroup.Location = new System.Drawing.Point(1369, 11);
-            this.buttonAutoGroup.Name = "buttonAutoGroup";
-            this.buttonAutoGroup.Size = new System.Drawing.Size(114, 28);
-            this.buttonAutoGroup.TabIndex = 33;
-            this.buttonAutoGroup.Text = "Auto Add";
-            this.buttonAutoGroup.UseVisualStyleBackColor = true;
-            this.buttonAutoGroup.Click += new System.EventHandler(this.buttonAutoGroup_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(770, 435);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 28);
-            this.textBox1.TabIndex = 34;
-            // 
-            // textBox_add_group_cnt
-            // 
-            this.textBox_add_group_cnt.Location = new System.Drawing.Point(1489, 11);
-            this.textBox_add_group_cnt.Name = "textBox_add_group_cnt";
-            this.textBox_add_group_cnt.Size = new System.Drawing.Size(100, 28);
-            this.textBox_add_group_cnt.TabIndex = 35;
             // 
             // Form1
             // 
