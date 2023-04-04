@@ -16455,5 +16455,41 @@ namespace ZGWUI
             //    }
             //}
         }
+
+        private void buttonSimuTuya_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(textBoxRawDataCommandsTargetAddr.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(textBoxRawDataCommandsSrcEP.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(textBoxRawDataCommandsDstEP.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(textBoxRawDataCommandsProfileID.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(textBoxRawDataCommandsClusterID.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(textBoxRawDataCommandsSecurityMode.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(textBoxRawDataCommandsRadius.Text, out u8Radius) == true)
+                                    {
+                                        //stringRawData = textBoxRawDataCommandsData.Text;
+                                        stringRawData = "10:01:00:00:00:01:00:05:00:07:00:fe:ff:04:00";
+                                        sendRawDataCommandsRequest((byte)comboBoxRawDataCommandsAddrMode.SelectedIndex, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

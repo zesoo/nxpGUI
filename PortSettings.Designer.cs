@@ -49,7 +49,7 @@
             this.listBoxPorts.FormattingEnabled = true;
             this.listBoxPorts.ItemHeight = 18;
             this.listBoxPorts.Location = new System.Drawing.Point(16, 41);
-            this.listBoxPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxPorts.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxPorts.Name = "listBoxPorts";
             this.listBoxPorts.Size = new System.Drawing.Size(452, 112);
             this.listBoxPorts.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.comboBoxBaudRate.FormattingEnabled = true;
             this.comboBoxBaudRate.Location = new System.Drawing.Point(119, 177);
-            this.comboBoxBaudRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxBaudRate.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxBaudRate.Name = "comboBoxBaudRate";
             this.comboBoxBaudRate.Size = new System.Drawing.Size(180, 26);
             this.comboBoxBaudRate.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             this.comboBoxDataBits.FormattingEnabled = true;
             this.comboBoxDataBits.Location = new System.Drawing.Point(119, 213);
-            this.comboBoxDataBits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxDataBits.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDataBits.Name = "comboBoxDataBits";
             this.comboBoxDataBits.Size = new System.Drawing.Size(180, 26);
             this.comboBoxDataBits.TabIndex = 4;
@@ -109,7 +109,7 @@
             // 
             this.comboBoxParity.FormattingEnabled = true;
             this.comboBoxParity.Location = new System.Drawing.Point(119, 250);
-            this.comboBoxParity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxParity.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxParity.Name = "comboBoxParity";
             this.comboBoxParity.Size = new System.Drawing.Size(180, 26);
             this.comboBoxParity.TabIndex = 6;
@@ -138,7 +138,7 @@
             // 
             this.comboBoxStopBits.FormattingEnabled = true;
             this.comboBoxStopBits.Location = new System.Drawing.Point(119, 288);
-            this.comboBoxStopBits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxStopBits.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStopBits.Name = "comboBoxStopBits";
             this.comboBoxStopBits.Size = new System.Drawing.Size(180, 26);
             this.comboBoxStopBits.TabIndex = 9;
@@ -147,7 +147,7 @@
             // 
             this.comboBoxFlowControl.FormattingEnabled = true;
             this.comboBoxFlowControl.Location = new System.Drawing.Point(119, 325);
-            this.comboBoxFlowControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFlowControl.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxFlowControl.Name = "comboBoxFlowControl";
             this.comboBoxFlowControl.Size = new System.Drawing.Size(180, 26);
             this.comboBoxFlowControl.TabIndex = 10;
@@ -164,8 +164,8 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(358, 325);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOK.Location = new System.Drawing.Point(358, 275);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(112, 32);
             this.buttonOK.TabIndex = 12;
@@ -175,8 +175,8 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(358, 285);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Location = new System.Drawing.Point(358, 315);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(112, 32);
             this.buttonCancel.TabIndex = 13;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.comboBoxBaudRate);
             this.Controls.Add(this.listBoxPorts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PortSettings";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.PortSettings_Load);
