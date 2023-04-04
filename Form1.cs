@@ -287,6 +287,9 @@ namespace ZGWUI
             profileIdTextBoxInit(ref textBoxRawDataCommandsProfileID);
             clusterIdTextBoxInit(ref textBoxRawDataCommandsClusterID);
 
+            //textBox_simu_addr.ForeColor = System.Drawing.Color.Gray;
+            //textBox_simu_addr.Text = "Target (16-bit Hex)";
+
             textBoxRawDataCommandsSecurityMode.ForeColor = System.Drawing.Color.Gray;
             textBoxRawDataCommandsSecurityMode.Text = "Security Mode (8-bit Hex)";
 
@@ -16466,30 +16469,35 @@ namespace ZGWUI
             byte u8DstEndPoint;
             String stringRawData = "";
 
-            if (bStringToUint16(textBoxRawDataCommandsTargetAddr.Text, out u16TargetAddr) == true)
-            {
-                if (bStringToUint8(textBoxRawDataCommandsSrcEP.Text, out u8SrcEndPoint) == true)
-                {
-                    if (bStringToUint8(textBoxRawDataCommandsDstEP.Text, out u8DstEndPoint) == true)
-                    {
-                        if (bStringToUint16(textBoxRawDataCommandsProfileID.Text, out u16ProfileID) == true)
-                        {
-                            if (bStringToUint16(textBoxRawDataCommandsClusterID.Text, out u16ClusterID) == true)
-                            {
-                                if (bStringToUint8(textBoxRawDataCommandsSecurityMode.Text, out u8SecurityMode) == true)
-                                {
-                                    if (bStringToUint8(textBoxRawDataCommandsRadius.Text, out u8Radius) == true)
-                                    {
-                                        //stringRawData = textBoxRawDataCommandsData.Text;
-                                        stringRawData = "10:01:00:00:00:01:00:05:00:07:00:fe:ff:04:00";
-                                        sendRawDataCommandsRequest((byte)comboBoxRawDataCommandsAddrMode.SelectedIndex, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            //stringRawData = textBoxRawDataCommandsData.Text;
+            stringRawData = "10:01:00:00:00:01:00:05:00:07:00:fe:ff:04:00";
+            if (bStringToUint16(textBox_simu_addr.Text, out u16TargetAddr) == true) { 
+                sendRawDataCommandsRequest(2, u16TargetAddr, 1, 1, 0x0104, 0x0000, 0x28, 0x1e, stringRawData);
             }
+            //if (bStringToUint16(textBoxRawDataCommandsTargetAddr.Text, out u16TargetAddr) == true)
+            //{
+            //    if (bStringToUint8(textBoxRawDataCommandsSrcEP.Text, out u8SrcEndPoint) == true)
+            //    {
+            //        if (bStringToUint8(textBoxRawDataCommandsDstEP.Text, out u8DstEndPoint) == true)
+            //        {
+            //            if (bStringToUint16(textBoxRawDataCommandsProfileID.Text, out u16ProfileID) == true)
+            //            {
+            //                if (bStringToUint16(textBoxRawDataCommandsClusterID.Text, out u16ClusterID) == true)
+            //                {
+            //                    if (bStringToUint8(textBoxRawDataCommandsSecurityMode.Text, out u8SecurityMode) == true)
+            //                    {
+            //                        if (bStringToUint8(textBoxRawDataCommandsRadius.Text, out u8Radius) == true)
+            //                        {
+            //                            //stringRawData = textBoxRawDataCommandsData.Text;
+            //                            stringRawData = "10:01:00:00:00:01:00:05:00:07:00:fe:ff:04:00";
+            //                            sendRawDataCommandsRequest((byte)comboBoxRawDataCommandsAddrMode.SelectedIndex, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
         }
     }
 }
