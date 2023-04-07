@@ -538,6 +538,15 @@ namespace ZGWUI
             blockDelay16bitTextBoxInit(ref textBoxOTASetWaitForDataParamsRequestBlockDelay);
             time16bitTextBoxInit(ref textBoxIPNConfigPollPeriod);
 
+            // OTA Test tab initialization
+            tybitmap16TextBoxInit(ref textBoxTYNotifyMask);
+            tyfileVersionProtocolTextBoxInit(ref textBoxTYVerProtocol);
+            tyOTAVersionTextBoxInit(ref textBoxTYOTAVer);
+            tyFirmwareSizeTextBoxInit(ref textBoxTYFirmSize);
+            tyAutographTextBoxInit(ref textBoxTYAutoGraph);
+            tyPidTextBoxInit(ref textBoxTYPid);
+            tyOTATargetVersionTextBoxInit(ref textBoxTYTargetVersion);
+
             DIOMaskInit(ref textBoxDioSetDirectionOutputPinMask);
             DIOMaskInit(ref textBoxDioSetDirectionInputPinMask);
 
@@ -739,6 +748,48 @@ namespace ZGWUI
             comboBox.Items.Add("Short No Ack");
             comboBox.Items.Add("IEEE No Ack");
             comboBox.SelectedIndex = 0;
+        }
+
+        private void tybitmap16TextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY Notify Mask (16-bit Bitmaps)";
+        }
+
+        private void tyfileVersionProtocolTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY Version Protocol (8-bit Hex)";
+        }
+
+        private void tyOTAVersionTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY OTA Version (16-bit Hex)";
+        }
+
+        private void tyFirmwareSizeTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY Firmware Size (32-bit Hex)";
+        }
+
+        private void tyAutographTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY Auto Graph (128-bit Hex)";
+        }
+
+        private void tyPidTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY Pid (64-bit Hex)";
+        }
+
+        private void tyOTATargetVersionTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "TY OTA Target Version (16-bit Hex)";
         }
 
         private void startIndexTextBoxInit(ref TextBox textBox)
@@ -16581,6 +16632,305 @@ namespace ZGWUI
         }
 
         private void textBoxOtaFileID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OTATest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTYLoadImage_Click(object sender, EventArgs e)
+        {
+            if (openOtaFileDialog.ShowDialog() != DialogResult.Cancel)
+            {
+                FileStream otaFileStream = null;
+
+                try
+                {
+                    otaFileStream = File.OpenRead(openOtaFileDialog.FileName);                    
+                    otaFileStream.Read(au8OTAFile, 0, Convert.ToInt32(otaFileStream.Length));
+
+                    byte[] au8OtaFileHeaderString = null;
+                    au8OtaFileHeaderString = new byte[32];
+                    byte i;
+
+                    for (i = 0; i < 32; i++)
+                    {
+                        au8OtaFileHeaderString[i] = au8OTAFile[20 + i];
+                    }
+
+                    u32OtaFileIdentifier = BitConverter.ToUInt32(au8OTAFile, 0);
+                    u16OtaFileHeaderVersion = BitConverter.ToUInt16(au8OTAFile, 4);
+                    u16OtaFileHeaderLength = BitConverter.ToUInt16(au8OTAFile, 6);
+                    u16OtaFileHeaderControlField = BitConverter.ToUInt16(au8OTAFile, 8);
+                    u16OtaFileManufacturerCode = BitConverter.ToUInt16(au8OTAFile, 10);
+                    u16OtaFileImageType = BitConverter.ToUInt16(au8OTAFile, 12);
+                    u32OtaFileVersion = BitConverter.ToUInt32(au8OTAFile, 14);
+                    u16OtaFileStackVersion = BitConverter.ToUInt16(au8OTAFile, 18);
+                    u32OtaFileTotalImage = BitConverter.ToUInt32(au8OTAFile, 52);
+                    u8OtaFileSecurityCredVersion = au8OTAFile[56];
+                    u64OtaFileUpgradeFileDest = BitConverter.ToUInt64(au8OTAFile, 57);
+                    u16OtaFileMinimumHwVersion = BitConverter.ToUInt16(au8OTAFile, 65);
+                    u16OtaFileMaxHwVersion = BitConverter.ToUInt16(au8OTAFile, 67);
+
+                    textBoxOtaFileID.Text = u32OtaFileIdentifier.ToString("X4");
+                    textBoxOtaFileHeaderVer.Text = u16OtaFileHeaderVersion.ToString("X2");
+                    textBoxOtaFileHeaderLen.Text = u16OtaFileHeaderLength.ToString("X2");
+                    textBoxOtaFileHeaderFCTL.Text = u16OtaFileHeaderControlField.ToString("X2");
+                    textBoxOtaFileManuCode.Text = u16OtaFileManufacturerCode.ToString("X4");
+                    textBoxOtaFileImageType.Text = u16OtaFileImageType.ToString("X4");
+                    textBoxOtaFileVersion.Text = u32OtaFileVersion.ToString("X8");
+                    textBoxOtaFileStackVer.Text = u16OtaFileStackVersion.ToString("X2");
+                    textBoxOtaFileSize.Text = u32OtaFileTotalImage.ToString();
+                    textBoxOtaFileHeaderStr.Text = System.Text.Encoding.Default.GetString(au8OtaFileHeaderString);
+
+                    sendOtaLoadNewImage(0x02, 0x0000, u32OtaFileIdentifier, u16OtaFileHeaderVersion, u16OtaFileHeaderLength, u16OtaFileHeaderControlField, u16OtaFileManufacturerCode, u16OtaFileImageType, u32OtaFileVersion, u16OtaFileStackVersion, au8OtaFileHeaderString, u32OtaFileTotalImage, u8OtaFileSecurityCredVersion, u64OtaFileUpgradeFileDest, u16OtaFileMinimumHwVersion, u16OtaFileMaxHwVersion);                                
+                }
+                finally
+                {
+                    if (otaFileStream != null)
+                    {
+                        otaFileStream.Close();
+                        otaFileStream.Dispose();
+                    }
+                }
+            }            
+        }
+
+        private void buttonTYOTANotify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTYNotifyMask_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYNotifyMask.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYNotifyMask.ForeColor = System.Drawing.Color.Black;
+                textBoxTYNotifyMask.Text = "";
+            }
+        }
+
+        private void textBoxTYNotifyMask_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYNotifyMask.Text))
+            {
+                textBoxTYNotifyMask.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYNotifyMask.Text = "TY Notify Mask (16-bit Bitmaps)";
+            }
+        }
+
+        private void textBoxTYVerProtocol_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYVerProtocol.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYVerProtocol.ForeColor = System.Drawing.Color.Black;
+                textBoxTYVerProtocol.Text = "";
+            }
+        }
+
+        private void textBoxTYVerProtocol_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYVerProtocol.Text))
+            {
+                textBoxTYVerProtocol.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYVerProtocol.Text = "TY Version Protocol (8-bit Hex)";
+            }
+        }
+
+        private void textBoxTYOTAVer_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYOTAVer.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYOTAVer.ForeColor = System.Drawing.Color.Black;
+                textBoxTYOTAVer.Text = "";
+            }
+        }
+
+        private void textBoxTYOTAVer_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYOTAVer.Text))
+            {
+                textBoxTYOTAVer.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYOTAVer.Text = "TY OTA Version (16-bit Hex)";
+            }
+        }
+
+        private void textBoxTYFirmSize_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYFirmSize.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYFirmSize.ForeColor = System.Drawing.Color.Black;
+                textBoxTYFirmSize.Text = "";
+            }
+        }
+
+        private void textBoxTYFirmSize_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYFirmSize.Text))
+            {
+                textBoxTYFirmSize.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYFirmSize.Text = "TY Firmware Size (32-bit Hex)";
+            }
+        }
+
+        private void textBoxTYAutoGraph_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYAutoGraph.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYAutoGraph.ForeColor = System.Drawing.Color.Black;
+                textBoxTYAutoGraph.Text = "";
+            }
+        }
+
+        private void textBoxTYAutoGraph_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYAutoGraph.Text))
+            {
+                textBoxTYAutoGraph.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYAutoGraph.Text = "TY Auto Graph (128-bit Hex)";
+            }
+        }
+
+        private void textBoxTYPid_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYPid.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYPid.ForeColor = System.Drawing.Color.Black;
+                textBoxTYPid.Text = "";
+            }
+        }
+
+        private void textBoxTYPid_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYPid.Text))
+            {
+                textBoxTYPid.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYPid.Text = "TY Pid (64-bit Hex)";
+            }
+        }
+
+        private void textBoxTYTargetVersion_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxTYTargetVersion.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxTYTargetVersion.ForeColor = System.Drawing.Color.Black;
+                textBoxTYTargetVersion.Text = "";
+            }
+        }
+
+        private void textBoxTYTargetVersion_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTYTargetVersion.Text))
+            {
+                textBoxTYTargetVersion.ForeColor = System.Drawing.Color.Gray;
+                textBoxTYTargetVersion.Text = "TY Target Version (16-bit Hex)";
+            }
+        }
+
+        private void textBoxTYNotifyMask_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Notify Mask (16-bit Bitmaps)");
+        }
+
+        private void textBoxTYNotifyMask_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYVerProtocol_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Version Protocol (8-bit Hex)");
+        }
+
+        private void textBoxTYVerProtocol_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYOTAVer_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY OTA Version (16-bit Hex)");
+        }
+
+        private void textBoxTYOTAVer_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYFirmSize_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Firmware Size (32-bit Hex)");
+        }
+
+        private void textBoxTYFirmSize_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYAutoGraph_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Auto Graph (128-bit Hex)");
+        }
+
+        private void textBoxTYAutoGraph_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYPid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTYPid_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Pid (64-bit Hex)");
+        }
+
+        private void textBoxTYPid_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxTYTargetVersion_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("TY Target Version (16-bit Hex)");
+        }
+
+        private void textBoxTYTargetVersion_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void OTATest_Click_1(object sender, EventArgs e)
         {
 
         }
