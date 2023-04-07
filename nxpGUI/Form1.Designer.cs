@@ -139,6 +139,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.comboBoxAddressList = new System.Windows.Forms.ComboBox();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.textBox_simu_addr = new System.Windows.Forms.TextBox();
             this.buttonSimuTuya = new System.Windows.Forms.Button();
             this.textBoxOOBDataKey = new System.Windows.Forms.TextBox();
             this.textBoxOOBDataAddr = new System.Windows.Forms.TextBox();
@@ -503,7 +504,6 @@
             this.toolTipGeneralTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox_simu_addr = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -534,6 +534,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
@@ -754,6 +755,7 @@
             this.textBoxPollInterval.Size = new System.Drawing.Size(192, 28);
             this.textBoxPollInterval.TabIndex = 89;
             this.textBoxPollInterval.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPollInterval_MouseClick);
+            this.textBoxPollInterval.Leave += new System.EventHandler(this.textBoxPollInterval_Leave);
             this.textBoxPollInterval.MouseLeave += new System.EventHandler(this.textBoxPollInterval_MouseLeave);
             this.textBoxPollInterval.MouseHover += new System.EventHandler(this.textBoxPollInterval_MouseHover);
             // 
@@ -1939,6 +1941,18 @@
             this.tabPage12.TabIndex = 12;
             this.tabPage12.Text = "General";
             this.tabPage12.Click += new System.EventHandler(this.tabPage12_Click);
+            // 
+            // textBox_simu_addr
+            // 
+            this.textBox_simu_addr.Location = new System.Drawing.Point(194, 563);
+            this.textBox_simu_addr.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_simu_addr.Name = "textBox_simu_addr";
+            this.textBox_simu_addr.Size = new System.Drawing.Size(172, 28);
+            this.textBox_simu_addr.TabIndex = 98;
+            this.textBox_simu_addr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_simu_addr_MouseClick);
+            this.textBox_simu_addr.Leave += new System.EventHandler(this.textBox_simu_addr_Leave);
+            this.textBox_simu_addr.MouseLeave += new System.EventHandler(this.textBox_simu_addr_MouseLeave);
+            this.textBox_simu_addr.MouseHover += new System.EventHandler(this.textBox_simu_addr_MouseHover);
             // 
             // buttonSimuTuya
             // 
@@ -3285,6 +3299,7 @@
             this.textBoxOtaFileID.ReadOnly = true;
             this.textBoxOtaFileID.Size = new System.Drawing.Size(109, 28);
             this.textBoxOtaFileID.TabIndex = 1;
+            this.textBoxOtaFileID.TextChanged += new System.EventHandler(this.textBoxOtaFileID_TextChanged);
             // 
             // label11
             // 
@@ -6294,7 +6309,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(864, 9);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(862, 9);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6334,7 +6349,7 @@
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
             this.richTextBoxMessageView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(972, 355);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(970, 355);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
@@ -6403,13 +6418,6 @@
             this.splitContainer1.SplitterDistance = 1022;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 94;
-            // 
-            // textBox_simu_addr
-            // 
-            this.textBox_simu_addr.Location = new System.Drawing.Point(194, 563);
-            this.textBox_simu_addr.Name = "textBox_simu_addr";
-            this.textBox_simu_addr.Size = new System.Drawing.Size(172, 28);
-            this.textBox_simu_addr.TabIndex = 98;
             // 
             // Form1
             // 
@@ -6958,6 +6966,7 @@
         private System.Windows.Forms.Button buttonAutoGroup;
         private System.Windows.Forms.Button buttonSimuTuya;
         private System.Windows.Forms.TextBox textBox_simu_addr;
+        private System.Windows.Forms.Button button1;
     }
 }
 
