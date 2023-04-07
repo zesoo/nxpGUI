@@ -542,7 +542,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2078, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -573,10 +573,10 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusPort,
             this.toolStripPortSettings});
-            this.statusStrip.Location = new System.Drawing.Point(0, 1126);
+            this.statusStrip.Location = new System.Drawing.Point(0, 1028);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 22, 0);
-            this.statusStrip.Size = new System.Drawing.Size(2078, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1924, 22);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -6309,7 +6309,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(862, 9);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(161, 10);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6321,7 +6321,7 @@
             // buttonClearRaw
             // 
             this.buttonClearRaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearRaw.Location = new System.Drawing.Point(897, 9);
+            this.buttonClearRaw.Location = new System.Drawing.Point(83, 10);
             this.buttonClearRaw.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClearRaw.Name = "buttonClearRaw";
             this.buttonClearRaw.Size = new System.Drawing.Size(120, 33);
@@ -6332,48 +6332,48 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(4, 10);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(197, 18);
+            this.label4.Size = new System.Drawing.Size(104, 18);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Received Message View";
+            this.label4.Text = "ParsedLog";
             // 
             // richTextBoxMessageView
             // 
             this.richTextBoxMessageView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxMessageView.Location = new System.Drawing.Point(9, 45);
+            this.richTextBoxMessageView.Location = new System.Drawing.Point(7, 51);
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
-            this.richTextBoxMessageView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(970, 355);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(287, 61);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(4, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(71, 33);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Raw Data";
+            this.label3.Text = "RawLog";
             // 
             // richTextBoxCommandResponse
             // 
             this.richTextBoxCommandResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxCommandResponse.Location = new System.Drawing.Point(9, 45);
+            this.richTextBoxCommandResponse.Location = new System.Drawing.Point(13, 51);
             this.richTextBoxCommandResponse.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxCommandResponse.Name = "richTextBoxCommandResponse";
-            this.richTextBoxCommandResponse.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxCommandResponse.Size = new System.Drawing.Size(1007, 355);
+            this.richTextBoxCommandResponse.Size = new System.Drawing.Size(309, 61);
             this.richTextBoxCommandResponse.TabIndex = 4;
             this.richTextBoxCommandResponse.Text = "";
             this.richTextBoxCommandResponse.TextChanged += new System.EventHandler(this.richTextBoxCommandResponse_TextChanged);
@@ -6387,7 +6387,7 @@
             // checkBoxDebug
             // 
             this.checkBoxDebug.AutoSize = true;
-            this.checkBoxDebug.Location = new System.Drawing.Point(200, 9);
+            this.checkBoxDebug.Location = new System.Drawing.Point(115, 6);
             this.checkBoxDebug.Name = "checkBoxDebug";
             this.checkBoxDebug.Size = new System.Drawing.Size(232, 22);
             this.checkBoxDebug.TabIndex = 93;
@@ -6423,7 +6423,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(2078, 1148);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip);
@@ -6478,7 +6478,6 @@
             this.AHIControl.ResumeLayout(false);
             this.AHIControl.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

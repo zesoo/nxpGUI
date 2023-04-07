@@ -4675,6 +4675,7 @@ namespace ZGWUI
                 richTextBoxMessageView.Text += "\n";
             }
 
+
             switch (u16Type)
             {
                 case 0x8000:
@@ -7144,6 +7145,11 @@ namespace ZGWUI
                 }
                 break;
             }
+
+            richTextBoxMessageView.Text +="******************************\r\n";
+            richTextBoxMessageView.SelectionStart = richTextBoxMessageView.Text.Length; //Set the current caret position at the end
+            richTextBoxMessageView.ScrollToCaret(); //Now scroll it automatically
+
         }
 
         private void displayAttribute(UInt16 u16AttribId, byte u8AttribType, byte[] au8AttribData, byte u8AttribIndex, UInt16 u16AttrSize)
