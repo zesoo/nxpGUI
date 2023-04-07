@@ -332,6 +332,8 @@ namespace ZGWUI
             OOBAddrTextBoxInit(ref textBoxOOBDataAddr);
             OOBKeyTextBoxInit(ref textBoxOOBDataKey);
 
+            simuTextBoxInit(ref textBox_simu_addr);
+
             // Basic cluster tab initialization
             addrModeComboBoxZCLInit(ref comboBoxBasicResetTargetAddrMode);
             shortAddrTextBoxInit(ref textBoxBasicResetTargetAddr);
@@ -556,6 +558,8 @@ namespace ZGWUI
             PollControlFastPollingExpiryInit(ref textBoxFastPollExpiryTime);
 
             #endregion
+
+            PollIntervalTextBoxInit(ref textBoxPollInterval);
         }
 
         private void DIOMaskInit(ref TextBox textBox)
@@ -978,6 +982,12 @@ namespace ZGWUI
             textBox.Text = "Group Name (String)";
         }
 
+        private void PollIntervalTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "Poll Interval (16-bit Hex)";
+        }
+
         private void PollControlFastPollingExpiryInit(ref TextBox textBox)
         {
             textBox.ForeColor = System.Drawing.Color.Gray;
@@ -997,8 +1007,14 @@ namespace ZGWUI
             textBox.TextChanged += new EventHandler(textBoxOOBDataKey_TextChanged);
         }
 
+        private void simuTextBoxInit(ref TextBox textBox)
+        {
+            textBox.ForeColor = System.Drawing.Color.Gray;
+            textBox.Text = "Address (16-bit Hex)";
+        }
+
         #endregion
-        
+
         #region ToolTip
 
         private void showToolTipWindow(string s)
@@ -9132,6 +9148,38 @@ namespace ZGWUI
 
         #endregion
 
+        #region 模拟涂鸦网关
+
+        private void textBox_simu_addr_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("Destination Address (16-bit Hex)");
+        }
+
+        private void textBox_simu_addr_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBox_simu_addr_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBox_simu_addr.ForeColor != System.Drawing.Color.Black)
+            {
+                textBox_simu_addr.ForeColor = System.Drawing.Color.Black;
+                textBox_simu_addr.Text = "";
+            }
+        }
+
+        private void textBox_simu_addr_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox_simu_addr.Text))
+            {
+                textBox_simu_addr.ForeColor = System.Drawing.Color.Gray;
+                textBox_simu_addr.Text = "Address (16-bit Hex)";
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region AHITab
@@ -13846,6 +13894,37 @@ namespace ZGWUI
 
         #endregion
 
+        #region PollInterval
+        
+        private void textBoxPollInterval_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("Poll Interval to be used (32-bit Hex) milliseconds");
+        }
+
+        private void textBoxPollInterval_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void textBoxPollInterval_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (textBoxPollInterval.ForeColor != System.Drawing.Color.Black)
+            {
+                textBoxPollInterval.ForeColor = System.Drawing.Color.Black;
+                textBoxPollInterval.Text = "";
+            }
+        }
+
+        private void textBoxPollInterval_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxPollInterval.Text))
+            {
+                textBoxPollInterval.ForeColor = System.Drawing.Color.Gray;
+                textBoxPollInterval.Text = "Poll Interval (16-bit Hex)";
+            }
+        }
+        #endregion
+        
         #region Active Req
 
         private void textBoxActiveEpAddr_Leave(object sender, EventArgs e)
@@ -16281,25 +16360,6 @@ namespace ZGWUI
             }
         }
 
-        private void textBoxPollInterval_MouseHover(object sender, EventArgs e)
-        {
-            showToolTipWindow("Poll Interval to be used (32-bit Hex) milliseconds");
-        }
-
-        private void textBoxPollInterval_MouseLeave(object sender, EventArgs e)
-        {
-            hideToolTipWindow();
-        }
-
-        private void textBoxPollInterval_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (textBoxPollInterval.ForeColor != System.Drawing.Color.Black)
-            {
-                textBoxPollInterval.ForeColor = System.Drawing.Color.Black;
-                textBoxPollInterval.Text = "";
-            }
-        }
-
         private void buttonNciCmd_Click(object sender, EventArgs e)
         {
             setNciCmd((byte)comboBoxNciCmd.SelectedIndex);
@@ -16498,6 +16558,31 @@ namespace ZGWUI
             //        }
             //    }
             //}
+        }
+
+        private void textBoxPollInterval_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUnBindTargetExtAddr_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_simu_addr_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxActiveEpAddr_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxOtaFileID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
