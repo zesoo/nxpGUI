@@ -572,6 +572,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
@@ -579,7 +580,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2078, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(2452, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -610,10 +611,10 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusPort,
             this.toolStripPortSettings});
-            this.statusStrip.Location = new System.Drawing.Point(0, 1126);
+            this.statusStrip.Location = new System.Drawing.Point(0, 1028);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 22, 0);
-            this.statusStrip.Size = new System.Drawing.Size(2078, 22);
+            this.statusStrip.Size = new System.Drawing.Size(2452, 22);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -656,7 +657,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2038, 663);
+            this.tabControl1.Size = new System.Drawing.Size(2432, 663);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage2
@@ -759,7 +760,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(2030, 631);
+            this.tabPage2.Size = new System.Drawing.Size(2424, 631);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Management";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -3248,7 +3249,7 @@
             this.tabPageHeaderFCTL.Location = new System.Drawing.Point(4, 28);
             this.tabPageHeaderFCTL.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageHeaderFCTL.Name = "tabPageHeaderFCTL";
-            this.tabPageHeaderFCTL.Size = new System.Drawing.Size(2030, 631);
+            this.tabPageHeaderFCTL.Size = new System.Drawing.Size(2424, 631);
             this.tabPageHeaderFCTL.TabIndex = 14;
             this.tabPageHeaderFCTL.Text = "OTA Cluster";
             this.tabPageHeaderFCTL.Click += new System.EventHandler(this.tabPage14_Click);
@@ -3348,6 +3349,7 @@
             this.labelOTAFileID.Size = new System.Drawing.Size(71, 18);
             this.labelOTAFileID.TabIndex = 0;
             this.labelOTAFileID.Text = "File ID";
+            //this.labelOTAFileID.Click += new System.EventHandler(this.labelOTAFileID_Click);
             // 
             // textBoxOtaFileHeaderStr
             // 
@@ -3603,6 +3605,7 @@
             this.comboBoxOTAImageNotifyAddrMode.Name = "comboBoxOTAImageNotifyAddrMode";
             this.comboBoxOTAImageNotifyAddrMode.Size = new System.Drawing.Size(157, 26);
             this.comboBoxOTAImageNotifyAddrMode.TabIndex = 12;
+            this.comboBoxOTAImageNotifyAddrMode.SelectedIndexChanged += new System.EventHandler(this.comboBoxOTAImageNotifyAddrMode_SelectedIndexChanged);
             this.comboBoxOTAImageNotifyAddrMode.MouseLeave += new System.EventHandler(this.comboBoxOTAImageNotifyAddrMode_MouseLeave);
             this.comboBoxOTAImageNotifyAddrMode.MouseHover += new System.EventHandler(this.comboBoxOTAImageNotifyAddrMode_MouseHover);
             // 
@@ -6385,10 +6388,11 @@
             this.OTATest.Location = new System.Drawing.Point(4, 28);
             this.OTATest.Name = "OTATest";
             this.OTATest.Padding = new System.Windows.Forms.Padding(3);
-            this.OTATest.Size = new System.Drawing.Size(2030, 631);
+            this.OTATest.Size = new System.Drawing.Size(2424, 631);
             this.OTATest.TabIndex = 20;
             this.OTATest.Text = "OTA Test";
             this.OTATest.UseVisualStyleBackColor = true;
+            //this.OTATest.Click += new System.EventHandler(this.OTATest_Click_2);
             // 
             // textBoxTYFirmSize
             // 
@@ -6655,7 +6659,9 @@
             this.comboBoxTYAddrType.Name = "comboBoxTYAddrType";
             this.comboBoxTYAddrType.Size = new System.Drawing.Size(157, 26);
             this.comboBoxTYAddrType.TabIndex = 55;
-            this.comboBoxTYAddrType.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBoxTYAddrType.SelectedIndexChanged += new System.EventHandler(this.comboBoxTYAddrType_SelectedIndexChanged);
+            this.comboBoxTYAddrType.MouseLeave += new System.EventHandler(this.comboBoxTYAddrType_MouseLeave);
+            this.comboBoxTYAddrType.MouseHover += new System.EventHandler(this.comboBoxTYAddrType_MouseHover);
             // 
             // TYOTANotify
             // 
@@ -6758,7 +6764,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(864, 9);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(1124, 9);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6770,7 +6776,7 @@
             // buttonClearRaw
             // 
             this.buttonClearRaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearRaw.Location = new System.Drawing.Point(897, 9);
+            this.buttonClearRaw.Location = new System.Drawing.Point(1161, 9);
             this.buttonClearRaw.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClearRaw.Name = "buttonClearRaw";
             this.buttonClearRaw.Size = new System.Drawing.Size(120, 33);
@@ -6798,7 +6804,7 @@
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
             this.richTextBoxMessageView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(972, 355);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(1232, 355);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
@@ -6822,7 +6828,7 @@
             this.richTextBoxCommandResponse.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxCommandResponse.Name = "richTextBoxCommandResponse";
             this.richTextBoxCommandResponse.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBoxCommandResponse.Size = new System.Drawing.Size(1007, 355);
+            this.richTextBoxCommandResponse.Size = new System.Drawing.Size(1271, 355);
             this.richTextBoxCommandResponse.TabIndex = 4;
             this.richTextBoxCommandResponse.Text = "";
             this.richTextBoxCommandResponse.TextChanged += new System.EventHandler(this.richTextBoxCommandResponse_TextChanged);
@@ -6863,8 +6869,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.checkBoxDebug);
             this.splitContainer1.Panel2.Controls.Add(this.buttonMessageViewClear);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBoxMessageView);
-            this.splitContainer1.Size = new System.Drawing.Size(2038, 404);
-            this.splitContainer1.SplitterDistance = 1022;
+            this.splitContainer1.Size = new System.Drawing.Size(2566, 404);
+            this.splitContainer1.SplitterDistance = 1286;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 94;
             // 
@@ -6872,7 +6878,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(2078, 1148);
+            this.ClientSize = new System.Drawing.Size(2452, 1050);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip);

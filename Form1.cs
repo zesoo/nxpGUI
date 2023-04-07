@@ -539,6 +539,7 @@ namespace ZGWUI
             time16bitTextBoxInit(ref textBoxIPNConfigPollPeriod);
 
             // OTA Test tab initialization
+            addrModeComboBoxZCLInit(ref comboBoxTYAddrType);
             tybitmap16TextBoxInit(ref textBoxTYNotifyMask);
             tyfileVersionProtocolTextBoxInit(ref textBoxTYVerProtocol);
             tyOTAVersionTextBoxInit(ref textBoxTYOTAVer);
@@ -16656,11 +16657,6 @@ namespace ZGWUI
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonTYLoadImage_Click(object sender, EventArgs e)
         {
             if (openOtaFileDialog.ShowDialog() != DialogResult.Cancel)
@@ -16695,16 +16691,16 @@ namespace ZGWUI
                     u16OtaFileMinimumHwVersion = BitConverter.ToUInt16(au8OTAFile, 65);
                     u16OtaFileMaxHwVersion = BitConverter.ToUInt16(au8OTAFile, 67);
 
-                    textBoxOtaFileID.Text = u32OtaFileIdentifier.ToString("X4");
-                    textBoxOtaFileHeaderVer.Text = u16OtaFileHeaderVersion.ToString("X2");
-                    textBoxOtaFileHeaderLen.Text = u16OtaFileHeaderLength.ToString("X2");
-                    textBoxOtaFileHeaderFCTL.Text = u16OtaFileHeaderControlField.ToString("X2");
-                    textBoxOtaFileManuCode.Text = u16OtaFileManufacturerCode.ToString("X4");
-                    textBoxOtaFileImageType.Text = u16OtaFileImageType.ToString("X4");
-                    textBoxOtaFileVersion.Text = u32OtaFileVersion.ToString("X8");
-                    textBoxOtaFileStackVer.Text = u16OtaFileStackVersion.ToString("X2");
-                    textBoxOtaFileSize.Text = u32OtaFileTotalImage.ToString();
-                    textBoxOtaFileHeaderStr.Text = System.Text.Encoding.Default.GetString(au8OtaFileHeaderString);
+                    textBoxTYFileID.Text = u32OtaFileIdentifier.ToString("X4");
+                    textBoxTYHeaderVer.Text = u16OtaFileHeaderVersion.ToString("X2");
+                    textBoxTYHeaderLen.Text = u16OtaFileHeaderLength.ToString("X2");
+                    textBoxTYHeaderFCTL.Text = u16OtaFileHeaderControlField.ToString("X2");
+                    textBoxTYManuCode.Text = u16OtaFileManufacturerCode.ToString("X4");
+                    textBoxTYImageType.Text = u16OtaFileImageType.ToString("X4");
+                    textBoxTYFileVersion.Text = u32OtaFileVersion.ToString("X8");
+                    textBoxTYStackVer.Text = u16OtaFileStackVersion.ToString("X2");
+                    textBoxTYSize.Text = u32OtaFileTotalImage.ToString();
+                    textBoxTYHeaderStr.Text = System.Text.Encoding.Default.GetString(au8OtaFileHeaderString);
 
                     sendOtaLoadNewImage(0x02, 0x0000, u32OtaFileIdentifier, u16OtaFileHeaderVersion, u16OtaFileHeaderLength, u16OtaFileHeaderControlField, u16OtaFileManufacturerCode, u16OtaFileImageType, u32OtaFileVersion, u16OtaFileStackVersion, au8OtaFileHeaderString, u32OtaFileTotalImage, u8OtaFileSecurityCredVersion, u64OtaFileUpgradeFileDest, u16OtaFileMinimumHwVersion, u16OtaFileMaxHwVersion);                                
                 }
@@ -16933,6 +16929,26 @@ namespace ZGWUI
         private void OTATest_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxOTAImageNotifyAddrMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTYAddrType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTYAddrType_MouseLeave(object sender, EventArgs e)
+        {
+            hideToolTipWindow();
+        }
+
+        private void comboBoxTYAddrType_MouseHover(object sender, EventArgs e)
+        {
+            showToolTipWindow("Address Mode");
         }
     }
 }
