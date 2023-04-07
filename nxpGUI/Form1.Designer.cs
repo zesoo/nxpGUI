@@ -6966,7 +6966,7 @@
         private System.Windows.Forms.Button buttonAutoGroup;
         private System.Windows.Forms.Button buttonSimuTuya;
         private System.Windows.Forms.TextBox textBox_simu_addr;
-        private System.Windows.Forms.Button button1;
+        //private System.Windows.Forms.Button button1;
     }
 }
 

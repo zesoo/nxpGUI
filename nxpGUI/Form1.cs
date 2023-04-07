@@ -16522,11 +16522,6 @@ namespace ZGWUI
         private void buttonSimuTuya_Click(object sender, EventArgs e)
         {
             UInt16 u16TargetAddr;
-            UInt16 u16ClusterID;
-            UInt16 u16ProfileID;
-            byte u8SecurityMode, u8Radius;
-            byte u8SrcEndPoint;
-            byte u8DstEndPoint;
             String stringRawData = "";
 
             //stringRawData = textBoxRawDataCommandsData.Text;
