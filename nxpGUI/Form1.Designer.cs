@@ -534,7 +534,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
@@ -2013,10 +2012,10 @@
             // 
             // textBoxRawDataCommandsProfileID
             // 
-            this.textBoxRawDataCommandsProfileID.Location = new System.Drawing.Point(812, 480);
+            this.textBoxRawDataCommandsProfileID.Location = new System.Drawing.Point(646, 480);
             this.textBoxRawDataCommandsProfileID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsProfileID.Name = "textBoxRawDataCommandsProfileID";
-            this.textBoxRawDataCommandsProfileID.Size = new System.Drawing.Size(163, 28);
+            this.textBoxRawDataCommandsProfileID.Size = new System.Drawing.Size(151, 28);
             this.textBoxRawDataCommandsProfileID.TabIndex = 86;
             this.textBoxRawDataCommandsProfileID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsProfileID_MouseClick);
             this.textBoxRawDataCommandsProfileID.Leave += new System.EventHandler(this.textBoxRawDataCommandsProfileID_Leave);
@@ -2025,10 +2024,10 @@
             // 
             // textBoxRawDataCommandsSecurityMode
             // 
-            this.textBoxRawDataCommandsSecurityMode.Location = new System.Drawing.Point(1326, 480);
+            this.textBoxRawDataCommandsSecurityMode.Location = new System.Drawing.Point(1007, 484);
             this.textBoxRawDataCommandsSecurityMode.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsSecurityMode.Name = "textBoxRawDataCommandsSecurityMode";
-            this.textBoxRawDataCommandsSecurityMode.Size = new System.Drawing.Size(310, 28);
+            this.textBoxRawDataCommandsSecurityMode.Size = new System.Drawing.Size(68, 28);
             this.textBoxRawDataCommandsSecurityMode.TabIndex = 89;
             this.textBoxRawDataCommandsSecurityMode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsSecurityMode_MouseClick);
             this.textBoxRawDataCommandsSecurityMode.Leave += new System.EventHandler(this.textBoxRawDataCommandsSecurityMode_Leave);
@@ -2037,10 +2036,10 @@
             // 
             // textBoxRawDataCommandsRadius
             // 
-            this.textBoxRawDataCommandsRadius.Location = new System.Drawing.Point(1156, 480);
+            this.textBoxRawDataCommandsRadius.Location = new System.Drawing.Point(933, 482);
             this.textBoxRawDataCommandsRadius.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsRadius.Name = "textBoxRawDataCommandsRadius";
-            this.textBoxRawDataCommandsRadius.Size = new System.Drawing.Size(157, 28);
+            this.textBoxRawDataCommandsRadius.Size = new System.Drawing.Size(57, 28);
             this.textBoxRawDataCommandsRadius.TabIndex = 88;
             this.textBoxRawDataCommandsRadius.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsRadius_MouseClick);
             this.textBoxRawDataCommandsRadius.Leave += new System.EventHandler(this.textBoxRawDataCommandsRadius_Leave);
@@ -2049,10 +2048,10 @@
             // 
             // textBoxRawDataCommandsData
             // 
-            this.textBoxRawDataCommandsData.Location = new System.Drawing.Point(1647, 480);
+            this.textBoxRawDataCommandsData.Location = new System.Drawing.Point(1090, 485);
             this.textBoxRawDataCommandsData.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsData.Name = "textBoxRawDataCommandsData";
-            this.textBoxRawDataCommandsData.Size = new System.Drawing.Size(370, 28);
+            this.textBoxRawDataCommandsData.Size = new System.Drawing.Size(797, 28);
             this.textBoxRawDataCommandsData.TabIndex = 90;
             this.textBoxRawDataCommandsData.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsData_MouseClick);
             this.textBoxRawDataCommandsData.Leave += new System.EventHandler(this.textBoxRawDataCommandsData_Leave);
@@ -2061,10 +2060,10 @@
             // 
             // textBoxRawDataCommandsClusterID
             // 
-            this.textBoxRawDataCommandsClusterID.Location = new System.Drawing.Point(987, 480);
+            this.textBoxRawDataCommandsClusterID.Location = new System.Drawing.Point(805, 482);
             this.textBoxRawDataCommandsClusterID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsClusterID.Name = "textBoxRawDataCommandsClusterID";
-            this.textBoxRawDataCommandsClusterID.Size = new System.Drawing.Size(162, 28);
+            this.textBoxRawDataCommandsClusterID.Size = new System.Drawing.Size(120, 28);
             this.textBoxRawDataCommandsClusterID.TabIndex = 87;
             this.textBoxRawDataCommandsClusterID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsClusterID_MouseClick);
             this.textBoxRawDataCommandsClusterID.Leave += new System.EventHandler(this.textBoxRawDataCommandsClusterID_Leave);
@@ -2073,10 +2072,10 @@
             // 
             // textBoxRawDataCommandsDstEP
             // 
-            this.textBoxRawDataCommandsDstEP.Location = new System.Drawing.Point(648, 480);
+            this.textBoxRawDataCommandsDstEP.Location = new System.Drawing.Point(563, 480);
             this.textBoxRawDataCommandsDstEP.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsDstEP.Name = "textBoxRawDataCommandsDstEP";
-            this.textBoxRawDataCommandsDstEP.Size = new System.Drawing.Size(152, 28);
+            this.textBoxRawDataCommandsDstEP.Size = new System.Drawing.Size(72, 28);
             this.textBoxRawDataCommandsDstEP.TabIndex = 85;
             this.textBoxRawDataCommandsDstEP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsDstEP_MouseClick);
             this.textBoxRawDataCommandsDstEP.Leave += new System.EventHandler(this.textBoxRawDataCommandsDstEP_Leave);
@@ -2088,7 +2087,7 @@
             this.textBoxRawDataCommandsSrcEP.Location = new System.Drawing.Point(478, 480);
             this.textBoxRawDataCommandsSrcEP.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsSrcEP.Name = "textBoxRawDataCommandsSrcEP";
-            this.textBoxRawDataCommandsSrcEP.Size = new System.Drawing.Size(157, 28);
+            this.textBoxRawDataCommandsSrcEP.Size = new System.Drawing.Size(66, 28);
             this.textBoxRawDataCommandsSrcEP.TabIndex = 84;
             this.textBoxRawDataCommandsSrcEP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsSrcEP_MouseClick);
             this.textBoxRawDataCommandsSrcEP.Leave += new System.EventHandler(this.textBoxRawDataCommandsSrcEP_Leave);
@@ -2100,7 +2099,7 @@
             this.textBoxRawDataCommandsTargetAddr.Location = new System.Drawing.Point(312, 480);
             this.textBoxRawDataCommandsTargetAddr.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawDataCommandsTargetAddr.Name = "textBoxRawDataCommandsTargetAddr";
-            this.textBoxRawDataCommandsTargetAddr.Size = new System.Drawing.Size(157, 28);
+            this.textBoxRawDataCommandsTargetAddr.Size = new System.Drawing.Size(153, 28);
             this.textBoxRawDataCommandsTargetAddr.TabIndex = 83;
             this.textBoxRawDataCommandsTargetAddr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxRawDataCommandsTargetAddr_MouseClick);
             this.textBoxRawDataCommandsTargetAddr.Leave += new System.EventHandler(this.textBoxRawDataCommandsTargetAddr_Leave);
@@ -6309,7 +6308,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(161, 10);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(157, 10);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6349,7 +6348,7 @@
             this.richTextBoxMessageView.Location = new System.Drawing.Point(7, 51);
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(287, 61);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(283, 61);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
