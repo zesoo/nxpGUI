@@ -16585,5 +16585,215 @@ namespace ZGWUI
         {
 
         }
+
+        private void btn_raw_1_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_1.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_1.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_1.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_1.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_1.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_1.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_1.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_1.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_1.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_1.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_1.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_1.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_1.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_1.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_1.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_1.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_raw_2_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_2.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_2.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_2.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_2.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_2.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_2.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_2.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_2.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_raw_3_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_3.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_3.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_3.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_3.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_3.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_3.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_3.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_3.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_raw_4_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_4.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_4.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_4.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_4.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_4.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_4.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_4.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_4.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_raw_5_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            UInt16 u16ClusterID;
+            UInt16 u16ProfileID;
+            byte u8SecurityMode, u8Radius;
+            byte u8SrcEndPoint;
+            byte u8DstEndPoint;
+            String stringRawData = "";
+
+            if (bStringToUint16(tbox_raw_dst_5.Text, out u16TargetAddr) == true)
+            {
+                if (bStringToUint8(tbox_raw_src_ep_5.Text, out u8SrcEndPoint) == true)
+                {
+                    if (bStringToUint8(tbox_raw_dst_ep_5.Text, out u8DstEndPoint) == true)
+                    {
+                        if (bStringToUint16(tbox_raw_profile_5.Text, out u16ProfileID) == true)
+                        {
+                            if (bStringToUint16(tbox_raw_cluster_5.Text, out u16ClusterID) == true)
+                            {
+                                if (bStringToUint8(tbox_raw_ser_5.Text, out u8SecurityMode) == true)
+                                {
+                                    if (bStringToUint8(tbox_raw_radius_5.Text, out u8Radius) == true)
+                                    {
+                                        stringRawData = tbox_raw_aps_5.Text;
+                                        sendRawDataCommandsRequest((byte)2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint, u16ProfileID, u16ClusterID, u8SecurityMode, u8Radius, stringRawData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

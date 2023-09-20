@@ -504,6 +504,60 @@
             this.toolTipGeneralTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.tbox_raw_profile_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_ser_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_radius_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_aps_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_cluster_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_ep_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_src_ep_1 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_1 = new System.Windows.Forms.TextBox();
+            this.btn_raw_1 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbox_raw_profile_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_ser_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_radius_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_aps_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_cluster_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_ep_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_src_ep_2 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_2 = new System.Windows.Forms.TextBox();
+            this.btn_raw_2 = new System.Windows.Forms.Button();
+            this.tbox_raw_profile_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_ser_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_radius_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_aps_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_cluster_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_ep_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_src_ep_3 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_3 = new System.Windows.Forms.TextBox();
+            this.btn_raw_3 = new System.Windows.Forms.Button();
+            this.tbox_raw_profile_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_ser_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_radius_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_aps_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_cluster_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_ep_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_src_ep_4 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_4 = new System.Windows.Forms.TextBox();
+            this.btn_raw_4 = new System.Windows.Forms.Button();
+            this.tbox_raw_profile_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_ser_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_radius_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_aps_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_cluster_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_ep_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_src_ep_5 = new System.Windows.Forms.TextBox();
+            this.tbox_raw_dst_5 = new System.Windows.Forms.TextBox();
+            this.btn_raw_5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -530,10 +584,12 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tabPage16.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
@@ -599,6 +655,7 @@
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.BasicClusterTab);
             this.tabControl1.Controls.Add(this.tabPage14);
+            this.tabControl1.Controls.Add(this.tabPage16);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage7);
@@ -6308,7 +6365,7 @@
             // buttonMessageViewClear
             // 
             this.buttonMessageViewClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMessageViewClear.Location = new System.Drawing.Point(157, 10);
+            this.buttonMessageViewClear.Location = new System.Drawing.Point(155, 10);
             this.buttonMessageViewClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMessageViewClear.Name = "buttonMessageViewClear";
             this.buttonMessageViewClear.Size = new System.Drawing.Size(120, 33);
@@ -6348,7 +6405,7 @@
             this.richTextBoxMessageView.Location = new System.Drawing.Point(7, 51);
             this.richTextBoxMessageView.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessageView.Name = "richTextBoxMessageView";
-            this.richTextBoxMessageView.Size = new System.Drawing.Size(283, 61);
+            this.richTextBoxMessageView.Size = new System.Drawing.Size(281, 61);
             this.richTextBoxMessageView.TabIndex = 17;
             this.richTextBoxMessageView.Text = "";
             this.richTextBoxMessageView.TextChanged += new System.EventHandler(this.richTextBoxMessageView_TextChanged);
@@ -6418,6 +6475,516 @@
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 94;
             // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.tbox_raw_profile_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_ser_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_radius_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_aps_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_cluster_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_ep_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_src_ep_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_5);
+            this.tabPage16.Controls.Add(this.btn_raw_5);
+            this.tabPage16.Controls.Add(this.tbox_raw_profile_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_ser_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_radius_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_aps_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_cluster_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_ep_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_src_ep_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_4);
+            this.tabPage16.Controls.Add(this.btn_raw_4);
+            this.tabPage16.Controls.Add(this.tbox_raw_profile_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_ser_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_radius_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_aps_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_cluster_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_ep_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_src_ep_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_3);
+            this.tabPage16.Controls.Add(this.btn_raw_3);
+            this.tabPage16.Controls.Add(this.tbox_raw_profile_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_ser_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_radius_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_aps_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_cluster_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_ep_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_src_ep_2);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_2);
+            this.tabPage16.Controls.Add(this.btn_raw_2);
+            this.tabPage16.Controls.Add(this.label26);
+            this.tabPage16.Controls.Add(this.label25);
+            this.tabPage16.Controls.Add(this.label24);
+            this.tabPage16.Controls.Add(this.label23);
+            this.tabPage16.Controls.Add(this.label22);
+            this.tabPage16.Controls.Add(this.label21);
+            this.tabPage16.Controls.Add(this.label20);
+            this.tabPage16.Controls.Add(this.label19);
+            this.tabPage16.Controls.Add(this.tbox_raw_profile_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_ser_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_radius_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_aps_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_cluster_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_ep_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_src_ep_1);
+            this.tabPage16.Controls.Add(this.tbox_raw_dst_1);
+            this.tabPage16.Controls.Add(this.btn_raw_1);
+            this.tabPage16.Location = new System.Drawing.Point(4, 28);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Size = new System.Drawing.Size(2030, 631);
+            this.tabPage16.TabIndex = 20;
+            this.tabPage16.Text = "Raw Date";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // tbox_raw_profile_1
+            // 
+            this.tbox_raw_profile_1.Location = new System.Drawing.Point(499, 46);
+            this.tbox_raw_profile_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_profile_1.Name = "tbox_raw_profile_1";
+            this.tbox_raw_profile_1.Size = new System.Drawing.Size(151, 28);
+            this.tbox_raw_profile_1.TabIndex = 96;
+            // 
+            // tbox_raw_ser_1
+            // 
+            this.tbox_raw_ser_1.Location = new System.Drawing.Point(860, 50);
+            this.tbox_raw_ser_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_ser_1.Name = "tbox_raw_ser_1";
+            this.tbox_raw_ser_1.Size = new System.Drawing.Size(68, 28);
+            this.tbox_raw_ser_1.TabIndex = 99;
+            // 
+            // tbox_raw_radius_1
+            // 
+            this.tbox_raw_radius_1.Location = new System.Drawing.Point(786, 48);
+            this.tbox_raw_radius_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_radius_1.Name = "tbox_raw_radius_1";
+            this.tbox_raw_radius_1.Size = new System.Drawing.Size(57, 28);
+            this.tbox_raw_radius_1.TabIndex = 98;
+            // 
+            // tbox_raw_aps_1
+            // 
+            this.tbox_raw_aps_1.Location = new System.Drawing.Point(943, 51);
+            this.tbox_raw_aps_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_aps_1.Name = "tbox_raw_aps_1";
+            this.tbox_raw_aps_1.Size = new System.Drawing.Size(797, 28);
+            this.tbox_raw_aps_1.TabIndex = 100;
+            // 
+            // tbox_raw_cluster_1
+            // 
+            this.tbox_raw_cluster_1.Location = new System.Drawing.Point(658, 48);
+            this.tbox_raw_cluster_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_cluster_1.Name = "tbox_raw_cluster_1";
+            this.tbox_raw_cluster_1.Size = new System.Drawing.Size(120, 28);
+            this.tbox_raw_cluster_1.TabIndex = 97;
+            // 
+            // tbox_raw_dst_ep_1
+            // 
+            this.tbox_raw_dst_ep_1.Location = new System.Drawing.Point(416, 46);
+            this.tbox_raw_dst_ep_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_ep_1.Name = "tbox_raw_dst_ep_1";
+            this.tbox_raw_dst_ep_1.Size = new System.Drawing.Size(72, 28);
+            this.tbox_raw_dst_ep_1.TabIndex = 95;
+            // 
+            // tbox_raw_src_ep_1
+            // 
+            this.tbox_raw_src_ep_1.Location = new System.Drawing.Point(331, 46);
+            this.tbox_raw_src_ep_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_src_ep_1.Name = "tbox_raw_src_ep_1";
+            this.tbox_raw_src_ep_1.Size = new System.Drawing.Size(66, 28);
+            this.tbox_raw_src_ep_1.TabIndex = 94;
+            // 
+            // tbox_raw_dst_1
+            // 
+            this.tbox_raw_dst_1.Location = new System.Drawing.Point(165, 46);
+            this.tbox_raw_dst_1.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_1.Name = "tbox_raw_dst_1";
+            this.tbox_raw_dst_1.Size = new System.Drawing.Size(153, 28);
+            this.tbox_raw_dst_1.TabIndex = 93;
+            // 
+            // btn_raw_1
+            // 
+            this.btn_raw_1.Location = new System.Drawing.Point(9, 46);
+            this.btn_raw_1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_raw_1.Name = "btn_raw_1";
+            this.btn_raw_1.Size = new System.Drawing.Size(142, 33);
+            this.btn_raw_1.TabIndex = 91;
+            this.btn_raw_1.Text = "Raw Data";
+            this.btn_raw_1.UseVisualStyleBackColor = true;
+            this.btn_raw_1.Click += new System.EventHandler(this.btn_raw_1_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(162, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 18);
+            this.label19.TabIndex = 142;
+            this.label19.Text = "dst addr";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(328, 15);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(62, 18);
+            this.label20.TabIndex = 143;
+            this.label20.Text = "src ep";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(413, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(62, 18);
+            this.label21.TabIndex = 144;
+            this.label21.Text = "dst ep";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(496, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 18);
+            this.label22.TabIndex = 145;
+            this.label22.Text = "profile";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(655, 15);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 18);
+            this.label23.TabIndex = 146;
+            this.label23.Text = "cluster";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(783, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(62, 18);
+            this.label24.TabIndex = 147;
+            this.label24.Text = "radius";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(860, 16);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 18);
+            this.label25.TabIndex = 148;
+            this.label25.Text = "security";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(940, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(35, 18);
+            this.label26.TabIndex = 149;
+            this.label26.Text = "aps";
+            // 
+            // tbox_raw_profile_2
+            // 
+            this.tbox_raw_profile_2.Location = new System.Drawing.Point(499, 106);
+            this.tbox_raw_profile_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_profile_2.Name = "tbox_raw_profile_2";
+            this.tbox_raw_profile_2.Size = new System.Drawing.Size(151, 28);
+            this.tbox_raw_profile_2.TabIndex = 154;
+            // 
+            // tbox_raw_ser_2
+            // 
+            this.tbox_raw_ser_2.Location = new System.Drawing.Point(860, 110);
+            this.tbox_raw_ser_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_ser_2.Name = "tbox_raw_ser_2";
+            this.tbox_raw_ser_2.Size = new System.Drawing.Size(68, 28);
+            this.tbox_raw_ser_2.TabIndex = 157;
+            // 
+            // tbox_raw_radius_2
+            // 
+            this.tbox_raw_radius_2.Location = new System.Drawing.Point(786, 108);
+            this.tbox_raw_radius_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_radius_2.Name = "tbox_raw_radius_2";
+            this.tbox_raw_radius_2.Size = new System.Drawing.Size(57, 28);
+            this.tbox_raw_radius_2.TabIndex = 156;
+            // 
+            // tbox_raw_aps_2
+            // 
+            this.tbox_raw_aps_2.Location = new System.Drawing.Point(943, 111);
+            this.tbox_raw_aps_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_aps_2.Name = "tbox_raw_aps_2";
+            this.tbox_raw_aps_2.Size = new System.Drawing.Size(797, 28);
+            this.tbox_raw_aps_2.TabIndex = 158;
+            // 
+            // tbox_raw_cluster_2
+            // 
+            this.tbox_raw_cluster_2.Location = new System.Drawing.Point(658, 108);
+            this.tbox_raw_cluster_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_cluster_2.Name = "tbox_raw_cluster_2";
+            this.tbox_raw_cluster_2.Size = new System.Drawing.Size(120, 28);
+            this.tbox_raw_cluster_2.TabIndex = 155;
+            // 
+            // tbox_raw_dst_ep_2
+            // 
+            this.tbox_raw_dst_ep_2.Location = new System.Drawing.Point(416, 106);
+            this.tbox_raw_dst_ep_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_ep_2.Name = "tbox_raw_dst_ep_2";
+            this.tbox_raw_dst_ep_2.Size = new System.Drawing.Size(72, 28);
+            this.tbox_raw_dst_ep_2.TabIndex = 153;
+            // 
+            // tbox_raw_src_ep_2
+            // 
+            this.tbox_raw_src_ep_2.Location = new System.Drawing.Point(331, 106);
+            this.tbox_raw_src_ep_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_src_ep_2.Name = "tbox_raw_src_ep_2";
+            this.tbox_raw_src_ep_2.Size = new System.Drawing.Size(66, 28);
+            this.tbox_raw_src_ep_2.TabIndex = 152;
+            // 
+            // tbox_raw_dst_2
+            // 
+            this.tbox_raw_dst_2.Location = new System.Drawing.Point(165, 106);
+            this.tbox_raw_dst_2.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_2.Name = "tbox_raw_dst_2";
+            this.tbox_raw_dst_2.Size = new System.Drawing.Size(153, 28);
+            this.tbox_raw_dst_2.TabIndex = 151;
+            // 
+            // btn_raw_2
+            // 
+            this.btn_raw_2.Location = new System.Drawing.Point(9, 106);
+            this.btn_raw_2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_raw_2.Name = "btn_raw_2";
+            this.btn_raw_2.Size = new System.Drawing.Size(142, 33);
+            this.btn_raw_2.TabIndex = 150;
+            this.btn_raw_2.Text = "Raw Data";
+            this.btn_raw_2.UseVisualStyleBackColor = true;
+            this.btn_raw_2.Click += new System.EventHandler(this.btn_raw_2_Click);
+            // 
+            // tbox_raw_profile_3
+            // 
+            this.tbox_raw_profile_3.Location = new System.Drawing.Point(499, 167);
+            this.tbox_raw_profile_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_profile_3.Name = "tbox_raw_profile_3";
+            this.tbox_raw_profile_3.Size = new System.Drawing.Size(151, 28);
+            this.tbox_raw_profile_3.TabIndex = 163;
+            // 
+            // tbox_raw_ser_3
+            // 
+            this.tbox_raw_ser_3.Location = new System.Drawing.Point(860, 171);
+            this.tbox_raw_ser_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_ser_3.Name = "tbox_raw_ser_3";
+            this.tbox_raw_ser_3.Size = new System.Drawing.Size(68, 28);
+            this.tbox_raw_ser_3.TabIndex = 166;
+            // 
+            // tbox_raw_radius_3
+            // 
+            this.tbox_raw_radius_3.Location = new System.Drawing.Point(786, 169);
+            this.tbox_raw_radius_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_radius_3.Name = "tbox_raw_radius_3";
+            this.tbox_raw_radius_3.Size = new System.Drawing.Size(57, 28);
+            this.tbox_raw_radius_3.TabIndex = 165;
+            // 
+            // tbox_raw_aps_3
+            // 
+            this.tbox_raw_aps_3.Location = new System.Drawing.Point(943, 172);
+            this.tbox_raw_aps_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_aps_3.Name = "tbox_raw_aps_3";
+            this.tbox_raw_aps_3.Size = new System.Drawing.Size(797, 28);
+            this.tbox_raw_aps_3.TabIndex = 167;
+            // 
+            // tbox_raw_cluster_3
+            // 
+            this.tbox_raw_cluster_3.Location = new System.Drawing.Point(658, 169);
+            this.tbox_raw_cluster_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_cluster_3.Name = "tbox_raw_cluster_3";
+            this.tbox_raw_cluster_3.Size = new System.Drawing.Size(120, 28);
+            this.tbox_raw_cluster_3.TabIndex = 164;
+            // 
+            // tbox_raw_dst_ep_3
+            // 
+            this.tbox_raw_dst_ep_3.Location = new System.Drawing.Point(416, 167);
+            this.tbox_raw_dst_ep_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_ep_3.Name = "tbox_raw_dst_ep_3";
+            this.tbox_raw_dst_ep_3.Size = new System.Drawing.Size(72, 28);
+            this.tbox_raw_dst_ep_3.TabIndex = 162;
+            // 
+            // tbox_raw_src_ep_3
+            // 
+            this.tbox_raw_src_ep_3.Location = new System.Drawing.Point(331, 167);
+            this.tbox_raw_src_ep_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_src_ep_3.Name = "tbox_raw_src_ep_3";
+            this.tbox_raw_src_ep_3.Size = new System.Drawing.Size(66, 28);
+            this.tbox_raw_src_ep_3.TabIndex = 161;
+            // 
+            // tbox_raw_dst_3
+            // 
+            this.tbox_raw_dst_3.Location = new System.Drawing.Point(165, 167);
+            this.tbox_raw_dst_3.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_3.Name = "tbox_raw_dst_3";
+            this.tbox_raw_dst_3.Size = new System.Drawing.Size(153, 28);
+            this.tbox_raw_dst_3.TabIndex = 160;
+            // 
+            // btn_raw_3
+            // 
+            this.btn_raw_3.Location = new System.Drawing.Point(9, 167);
+            this.btn_raw_3.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_raw_3.Name = "btn_raw_3";
+            this.btn_raw_3.Size = new System.Drawing.Size(142, 33);
+            this.btn_raw_3.TabIndex = 159;
+            this.btn_raw_3.Text = "Raw Data";
+            this.btn_raw_3.UseVisualStyleBackColor = true;
+            this.btn_raw_3.Click += new System.EventHandler(this.btn_raw_3_Click);
+            // 
+            // tbox_raw_profile_4
+            // 
+            this.tbox_raw_profile_4.Location = new System.Drawing.Point(499, 228);
+            this.tbox_raw_profile_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_profile_4.Name = "tbox_raw_profile_4";
+            this.tbox_raw_profile_4.Size = new System.Drawing.Size(151, 28);
+            this.tbox_raw_profile_4.TabIndex = 172;
+            // 
+            // tbox_raw_ser_4
+            // 
+            this.tbox_raw_ser_4.Location = new System.Drawing.Point(860, 232);
+            this.tbox_raw_ser_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_ser_4.Name = "tbox_raw_ser_4";
+            this.tbox_raw_ser_4.Size = new System.Drawing.Size(68, 28);
+            this.tbox_raw_ser_4.TabIndex = 175;
+            // 
+            // tbox_raw_radius_4
+            // 
+            this.tbox_raw_radius_4.Location = new System.Drawing.Point(786, 230);
+            this.tbox_raw_radius_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_radius_4.Name = "tbox_raw_radius_4";
+            this.tbox_raw_radius_4.Size = new System.Drawing.Size(57, 28);
+            this.tbox_raw_radius_4.TabIndex = 174;
+            // 
+            // tbox_raw_aps_4
+            // 
+            this.tbox_raw_aps_4.Location = new System.Drawing.Point(943, 233);
+            this.tbox_raw_aps_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_aps_4.Name = "tbox_raw_aps_4";
+            this.tbox_raw_aps_4.Size = new System.Drawing.Size(797, 28);
+            this.tbox_raw_aps_4.TabIndex = 176;
+            // 
+            // tbox_raw_cluster_4
+            // 
+            this.tbox_raw_cluster_4.Location = new System.Drawing.Point(658, 230);
+            this.tbox_raw_cluster_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_cluster_4.Name = "tbox_raw_cluster_4";
+            this.tbox_raw_cluster_4.Size = new System.Drawing.Size(120, 28);
+            this.tbox_raw_cluster_4.TabIndex = 173;
+            // 
+            // tbox_raw_dst_ep_4
+            // 
+            this.tbox_raw_dst_ep_4.Location = new System.Drawing.Point(416, 228);
+            this.tbox_raw_dst_ep_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_ep_4.Name = "tbox_raw_dst_ep_4";
+            this.tbox_raw_dst_ep_4.Size = new System.Drawing.Size(72, 28);
+            this.tbox_raw_dst_ep_4.TabIndex = 171;
+            // 
+            // tbox_raw_src_ep_4
+            // 
+            this.tbox_raw_src_ep_4.Location = new System.Drawing.Point(331, 228);
+            this.tbox_raw_src_ep_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_src_ep_4.Name = "tbox_raw_src_ep_4";
+            this.tbox_raw_src_ep_4.Size = new System.Drawing.Size(66, 28);
+            this.tbox_raw_src_ep_4.TabIndex = 170;
+            // 
+            // tbox_raw_dst_4
+            // 
+            this.tbox_raw_dst_4.Location = new System.Drawing.Point(165, 228);
+            this.tbox_raw_dst_4.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_4.Name = "tbox_raw_dst_4";
+            this.tbox_raw_dst_4.Size = new System.Drawing.Size(153, 28);
+            this.tbox_raw_dst_4.TabIndex = 169;
+            // 
+            // btn_raw_4
+            // 
+            this.btn_raw_4.Location = new System.Drawing.Point(9, 228);
+            this.btn_raw_4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_raw_4.Name = "btn_raw_4";
+            this.btn_raw_4.Size = new System.Drawing.Size(142, 33);
+            this.btn_raw_4.TabIndex = 168;
+            this.btn_raw_4.Text = "Raw Data";
+            this.btn_raw_4.UseVisualStyleBackColor = true;
+            this.btn_raw_4.Click += new System.EventHandler(this.btn_raw_4_Click);
+            // 
+            // tbox_raw_profile_5
+            // 
+            this.tbox_raw_profile_5.Location = new System.Drawing.Point(499, 285);
+            this.tbox_raw_profile_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_profile_5.Name = "tbox_raw_profile_5";
+            this.tbox_raw_profile_5.Size = new System.Drawing.Size(151, 28);
+            this.tbox_raw_profile_5.TabIndex = 181;
+            // 
+            // tbox_raw_ser_5
+            // 
+            this.tbox_raw_ser_5.Location = new System.Drawing.Point(860, 289);
+            this.tbox_raw_ser_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_ser_5.Name = "tbox_raw_ser_5";
+            this.tbox_raw_ser_5.Size = new System.Drawing.Size(68, 28);
+            this.tbox_raw_ser_5.TabIndex = 184;
+            // 
+            // tbox_raw_radius_5
+            // 
+            this.tbox_raw_radius_5.Location = new System.Drawing.Point(786, 287);
+            this.tbox_raw_radius_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_radius_5.Name = "tbox_raw_radius_5";
+            this.tbox_raw_radius_5.Size = new System.Drawing.Size(57, 28);
+            this.tbox_raw_radius_5.TabIndex = 183;
+            // 
+            // tbox_raw_aps_5
+            // 
+            this.tbox_raw_aps_5.Location = new System.Drawing.Point(943, 290);
+            this.tbox_raw_aps_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_aps_5.Name = "tbox_raw_aps_5";
+            this.tbox_raw_aps_5.Size = new System.Drawing.Size(797, 28);
+            this.tbox_raw_aps_5.TabIndex = 185;
+            // 
+            // tbox_raw_cluster_5
+            // 
+            this.tbox_raw_cluster_5.Location = new System.Drawing.Point(658, 287);
+            this.tbox_raw_cluster_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_cluster_5.Name = "tbox_raw_cluster_5";
+            this.tbox_raw_cluster_5.Size = new System.Drawing.Size(120, 28);
+            this.tbox_raw_cluster_5.TabIndex = 182;
+            // 
+            // tbox_raw_dst_ep_5
+            // 
+            this.tbox_raw_dst_ep_5.Location = new System.Drawing.Point(416, 285);
+            this.tbox_raw_dst_ep_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_ep_5.Name = "tbox_raw_dst_ep_5";
+            this.tbox_raw_dst_ep_5.Size = new System.Drawing.Size(72, 28);
+            this.tbox_raw_dst_ep_5.TabIndex = 180;
+            // 
+            // tbox_raw_src_ep_5
+            // 
+            this.tbox_raw_src_ep_5.Location = new System.Drawing.Point(331, 285);
+            this.tbox_raw_src_ep_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_src_ep_5.Name = "tbox_raw_src_ep_5";
+            this.tbox_raw_src_ep_5.Size = new System.Drawing.Size(66, 28);
+            this.tbox_raw_src_ep_5.TabIndex = 179;
+            // 
+            // tbox_raw_dst_5
+            // 
+            this.tbox_raw_dst_5.Location = new System.Drawing.Point(165, 285);
+            this.tbox_raw_dst_5.Margin = new System.Windows.Forms.Padding(4);
+            this.tbox_raw_dst_5.Name = "tbox_raw_dst_5";
+            this.tbox_raw_dst_5.Size = new System.Drawing.Size(153, 28);
+            this.tbox_raw_dst_5.TabIndex = 178;
+            // 
+            // btn_raw_5
+            // 
+            this.btn_raw_5.Location = new System.Drawing.Point(9, 285);
+            this.btn_raw_5.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_raw_5.Name = "btn_raw_5";
+            this.btn_raw_5.Size = new System.Drawing.Size(142, 33);
+            this.btn_raw_5.TabIndex = 177;
+            this.btn_raw_5.Text = "Raw Data";
+            this.btn_raw_5.UseVisualStyleBackColor = true;
+            this.btn_raw_5.Click += new System.EventHandler(this.btn_raw_5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -6481,6 +7048,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tabPage16.ResumeLayout(false);
+            this.tabPage16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6964,6 +7533,60 @@
         private System.Windows.Forms.Button buttonAutoGroup;
         private System.Windows.Forms.Button buttonSimuTuya;
         private System.Windows.Forms.TextBox textBox_simu_addr;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.TextBox tbox_raw_profile_1;
+        private System.Windows.Forms.TextBox tbox_raw_ser_1;
+        private System.Windows.Forms.TextBox tbox_raw_radius_1;
+        private System.Windows.Forms.TextBox tbox_raw_aps_1;
+        private System.Windows.Forms.TextBox tbox_raw_cluster_1;
+        private System.Windows.Forms.TextBox tbox_raw_dst_ep_1;
+        private System.Windows.Forms.TextBox tbox_raw_src_ep_1;
+        private System.Windows.Forms.TextBox tbox_raw_dst_1;
+        private System.Windows.Forms.Button btn_raw_1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox tbox_raw_profile_5;
+        private System.Windows.Forms.TextBox tbox_raw_ser_5;
+        private System.Windows.Forms.TextBox tbox_raw_radius_5;
+        private System.Windows.Forms.TextBox tbox_raw_aps_5;
+        private System.Windows.Forms.TextBox tbox_raw_cluster_5;
+        private System.Windows.Forms.TextBox tbox_raw_dst_ep_5;
+        private System.Windows.Forms.TextBox tbox_raw_src_ep_5;
+        private System.Windows.Forms.TextBox tbox_raw_dst_5;
+        private System.Windows.Forms.Button btn_raw_5;
+        private System.Windows.Forms.TextBox tbox_raw_profile_4;
+        private System.Windows.Forms.TextBox tbox_raw_ser_4;
+        private System.Windows.Forms.TextBox tbox_raw_radius_4;
+        private System.Windows.Forms.TextBox tbox_raw_aps_4;
+        private System.Windows.Forms.TextBox tbox_raw_cluster_4;
+        private System.Windows.Forms.TextBox tbox_raw_dst_ep_4;
+        private System.Windows.Forms.TextBox tbox_raw_src_ep_4;
+        private System.Windows.Forms.TextBox tbox_raw_dst_4;
+        private System.Windows.Forms.Button btn_raw_4;
+        private System.Windows.Forms.TextBox tbox_raw_profile_3;
+        private System.Windows.Forms.TextBox tbox_raw_ser_3;
+        private System.Windows.Forms.TextBox tbox_raw_radius_3;
+        private System.Windows.Forms.TextBox tbox_raw_aps_3;
+        private System.Windows.Forms.TextBox tbox_raw_cluster_3;
+        private System.Windows.Forms.TextBox tbox_raw_dst_ep_3;
+        private System.Windows.Forms.TextBox tbox_raw_src_ep_3;
+        private System.Windows.Forms.TextBox tbox_raw_dst_3;
+        private System.Windows.Forms.Button btn_raw_3;
+        private System.Windows.Forms.TextBox tbox_raw_profile_2;
+        private System.Windows.Forms.TextBox tbox_raw_ser_2;
+        private System.Windows.Forms.TextBox tbox_raw_radius_2;
+        private System.Windows.Forms.TextBox tbox_raw_aps_2;
+        private System.Windows.Forms.TextBox tbox_raw_cluster_2;
+        private System.Windows.Forms.TextBox tbox_raw_dst_ep_2;
+        private System.Windows.Forms.TextBox tbox_raw_src_ep_2;
+        private System.Windows.Forms.TextBox tbox_raw_dst_2;
+        private System.Windows.Forms.Button btn_raw_2;
         //private System.Windows.Forms.Button button1;
     }
 }
